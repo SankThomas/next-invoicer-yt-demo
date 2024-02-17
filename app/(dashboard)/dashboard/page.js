@@ -72,8 +72,8 @@ export default function Dashboard() {
   }
 
   useEffect(() => {
-    calculateTotal();
-  }, [quantity, price]);
+    calculateTotal(total);
+  }, [quantity, price, total]);
 
   // Calculate total amount of items in the table
   function calculateTotalAmount() {
@@ -300,7 +300,7 @@ export default function Dashboard() {
             <div className="grid gap-8">
               <div className="grid gap-4 md:grid-cols-2">
                 <article className="article">
-                  <label htmlFor="client-name">Client's name</label>
+                  <label htmlFor="client-name">Client&apos;s name</label>
                   <input
                     type="text"
                     name="client-name"
@@ -326,7 +326,7 @@ export default function Dashboard() {
 
               <div className="grid gap-4 md:grid-cols-2">
                 <article className="article">
-                  <label htmlFor="client-address">Client's address</label>
+                  <label htmlFor="client-address">Client&apos;s address</label>
                   <input
                     type="text"
                     name="client-address"
