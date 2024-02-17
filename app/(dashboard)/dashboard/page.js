@@ -44,7 +44,7 @@ export default function Dashboard() {
 
   const [isEditing, setIsEditing] = useState(false);
 
-  const [previewInvoice, setPreviewInvoice] = useState(true);
+  const [previewInvoice, setPreviewInvoice] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
