@@ -461,22 +461,24 @@ export default function Dashboard() {
 
         {previewInvoice && (
           <div className="fixed top-0 left-0 right-0 bottom-0 bg-black/75">
-            <ul className="flex items-center justify-around mt-16">
-              <li>
-                <Button variant="secondary" onClick={createPDF}>
-                  Download Invoice
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="customOutline"
-                  onClick={() => setPreviewInvoice(false)}
-                >
-                  <XIcon />
-                </Button>
-              </li>
-            </ul>
-            <PreviewInvoice values={values} />
+            <div className="max-w-5xl mx-auto">
+              <ul className="mt-16 flex items-center justify-between">
+                <li>
+                  <Button onClick={createPDF} variant="secondary">
+                    Download Invoice
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    onClick={() => setPreviewInvoice(false)}
+                    variant="customOutline"
+                  >
+                    <XIcon />
+                  </Button>
+                </li>
+              </ul>
+              <PreviewInvoice values={values} />
+            </div>
           </div>
         )}
       </section>
